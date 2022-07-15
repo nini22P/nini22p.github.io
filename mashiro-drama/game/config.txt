@@ -1,0 +1,5 @@
+Game_name:Mashiro-iro Symphony Drama;
+Game_key:2hiy8cc733;
+Title_img:title.jpg;
+Title_bgm:01.ogg;
+Loading_img:none;

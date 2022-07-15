@@ -1,0 +1,2 @@
+intro:注意：本游戏仅供学习和交流使用，禁止用于商业用途，著作权归 Palette 所有。|NOTE: This game is for learning and communication purposes only, commercial use is prohibited, and the copyright is owned by Palette.;
+choose:Vol.1 爱理篇 再一件棉袍:vol1.txt|Vol.2 樱乃篇 星期天要手牵手:vol2.txt|Vol.3 安洁篇 为天使献上祝福的光芒:vol3.txt|Vol.4 美羽篇 春天醋意浓浓:vol4.txt;

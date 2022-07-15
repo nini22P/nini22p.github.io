@@ -1,0 +1,267 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>22&#39;s Blog</title>
+<link rel="shortcut icon" href="https://nini22p.github.io/favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.2.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css">
+<link rel="stylesheet" href="https://nini22p.github.io/media/css/tailwind.css">
+<link rel="stylesheet" href="https://nini22p.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="22&#39;s Blog - Atom Feed" href="https://nini22p.github.io/atom.xml">
+
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-226398269-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'UA-226398269-1');
+  </script>
+    
+
+  <meta name="description" content="" />
+</head>
+<body>
+  <div class="antialiased flex flex-col min-h-screen" id="app">
+
+    <div class="nav py-3 md:py-8 fixed w-full z-10 bg-gray-50 dark:bg-gray-700 transition-all duration-300"
+  :class="{ 'scroll': scrolled }">
+  <div class="flex justify-end px-4">
+    <div class="w-8 h-8 flex justify-center items-center rounded-full md:hidden" @click="showMenu = !showMenu">
+      <i class="ri-close-line" v-show="showMenu"></i>
+      <i class="ri-menu-3-line" v-show="!showMenu"></i>
+    </div>
+  </div>
+  <nav class="max-w-4xl w-full mx-auto text-center flex flex-col md:flex-row justify-center md:block"
+    :class="`${ showMenu ? 'block' : 'hidden' }`">
+    
+      <a href="/" target=""
+        class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        HOME
+      </a>
+      
+      <a href="https://nini22p.github.io/post/projects" target=""
+        class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        PROJECTS
+      </a>
+      
+      <a href="/archives" target=""
+        class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        ARCHIVES
+      </a>
+      
+      <a href="/tags" target=""
+        class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        TAGS
+      </a>
+      
+      <a href="/post/about" target=""
+        class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+        ABOUT
+      </a>
+      
+        <a href="https://nini22p.github.io/atom.xml" target="_blank"
+          class="py-2 md:py-1 px-4 mx-4 inline-flex transition font-semibold rounded dark:hover:bg-gray-600 hover:bg-gray-200">
+          RSS
+        </a>
+  </nav>
+</div>
+
+    <div class="max-w-4xl w-full mx-auto ">
+      
+        <header class="flex py-16 md:py-32 mt-12 flex-col md:flex-row px-4 md:px-0 animated fadeIn">
+  <div class="flex-1 order-2 md:order-1 md:pr-16">
+    <div class="text-4xl font-bold text-center md:text-left">
+      22&#39;s Blog
+    </div>
+    <div class="text-xl text-gray-500 mt-4 text-center md:text-left">
+      
+    </div>
+    
+      <div class="mt-8 text-center md:text-left">
+        <a href="/start" arget="_blank"
+          class="text-sm bg-yellow-50 dark:bg-indigo-500 dark:text-gray-700 font-semibold px-4 py-2 inline-block yellow-btn transition-fast rounded">
+          LET&#39;S START!
+        </a>
+      </div>
+      
+        
+          <div class="mt-8 flex items-center">
+            
+              <div class="text-gray-500 mr-2">
+                Follow me 👉
+              </div>
+              
+                
+                  
+                            
+                  
+                            
+                  
+                            
+                  
+                            
+                  
+                            
+                  
+                    
+                        <a href="https://github.com/nini22P" target="_blank"
+                          class="mr-2 w-8 h-8 inline-flex items-center justify-center text-xl hover:bg-gray-200 dark:hover:bg-gray-600 transition-fast">
+                          <i class="ri-github-line"></i>
+                        </a>
+                        
+                          
+                            
+                  
+                            
+                  
+                            
+                  
+                            
+                  
+                            
+                  
+                            
+                  
+                            
+                  
+                            
+                  
+                            
+                  
+                            
+          </div>
+          
+  </div>
+  <div
+    class="md:mx-8 flex-shrink-0 self-start rounded-full border-4 border-dotted border-transparent hover:border-yellow-50 p-2 w-32 h-32 order-1 md:order-2 mx-auto s3-dotted">
+    <img class="rounded-full object-cover" src="https://nini22p.github.io/images/avatar.png?v=1657892141416"
+      alt="22&#39;s Blog" width="100%" height="100%">
+  </div>
+</header>
+      
+
+      <div class="shadow-box bg-white dark:bg-gray-600 border-gray-300 rounded-none md:rounded-lg -mx-1 md:mx-0 md:px-0">
+        
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://nini22p.github.io/post/game-patch/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          游戏补丁
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-07-15</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        HIKARI FIELD
+遊魂２ -you're the only one-
+樱之杜†净梦者
+茂伸奇谈
+淑女同萌
+茂伸奇谈-Happy End-
+爱上火车 -Last Run!!-
+樱之杜†净梦者2
+淑女同萌-New Division-
+苍...
+      </div>
+      <a href="https://nini22p.github.io/post/game-patch/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://nini22p.github.io/post-images/game-patch.jpg" alt="游戏补丁">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://nini22p.github.io/post/gog-baldr-sky-chs-patch/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          GOG Baldr Sky 汉化补丁
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-06-17</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        提取自 Steam 官方中文版本。
+如何使用：
+
+下载 Baldr Sky GOG CHS.7z 和 Baldr Sky Patch CHS.7z。
+解压并覆盖游戏目录文件。
+
+已知问题：
+
+存档地址在“文档\GIGA\BALDRSKY_D...
+      </div>
+      <a href="https://nini22p.github.io/post/gog-baldr-sky-chs-patch/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://nini22p.github.io/post-images/gog-baldr-sky-chs-patch.jpg" alt="GOG Baldr Sky 汉化补丁">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://nini22p.github.io/post/gog-the-song-of-saya-chs-patch/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          GOG 沙耶之歌 汉化补丁
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-05-27</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        文件提取自 Steam 版。
+下载地址：MEGA
+
+      </div>
+      <a href="https://nini22p.github.io/post/gog-the-song-of-saya-chs-patch/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://nini22p.github.io/post-images/gog-the-song-of-saya-chs-patch.jpg" alt="GOG 沙耶之歌 汉化补丁">
+    
+  </div>
+
+  <div class="p-8 border-b border-gray-200 dark:border-gray-700 flex relative overflow-hidden flex-col md:flex-row animated fadeIn">
+    
+    <div class="flex-1 order-2 md:order-1">
+      <h2 class="text-2xl font-semibold mb-4">
+        <a href="https://nini22p.github.io/post/xperia-x-dual-f5122-hk-firmwares/" class="text-gray-700 dark:text-gray-200 border-b-2 border-dotted border-gray-200 dark:border-gray-400 dark:hover:border-gray-200 hover:border-gray-600 transition-all duration-100">
+          Xperia X Dual F5122 HK Firmware 港版固件
+        </a>
+      </h2>
+      <div class="mb-4 text-xs text-gray-500">2022-04-25</div>
+      <div class="mb-4 text-gray-500 dark:text-gray-300">
+        F5122_34.4.A.2.118_HK
+MEGA
+...
+      </div>
+      <a href="https://nini22p.github.io/post/xperia-x-dual-f5122-hk-firmwares/" class="btn">
+        Read more
+      </a>
+    </div>
+    
+      <img class="flex-shrink-0 self-start md:ml-4 mb-4 md:mb-0 rounded-sm object-cover featured-img order-1 md:order-2 w-full h-40 md:w-56 md:h-32" loading="lazy" src="https://nini22p.github.io/post-images/xperia-x-dual-f5122-hk-firmwares.jpg" alt="Xperia X Dual F5122 HK Firmware 港版固件">
+    
+  </div>
+  
+      </div>
+
+      
+      <footer class="py-12 text-center px-4 md:px-0" v-pre>
+  Powered by <a href="https://nini22p.github.io/" target="_blank">22</a> | 2022
+</footer>
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://nini22p.github.io/media/scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+ -vol4/001.ogg -next;
+intro:纯白交响曲|DRAMA CD|春天醋意浓浓|;
+bgm:01.ogg;
+changeBg:bg22b.webp -next;
+changeFigure:mu/si2up/4.png -right -next;
+setFigAni:rightIn 1s -right;
+美羽:。。。。。。 -vol4/002.ogg;
+新吾:那个。。。学姐。 -vol4/003.ogg;
+changeFigure:none -right -next;
+changeFigure:mu/si1up/10.png -next;
+美羽:嗯？ -vol4/004.ogg;
+新吾:难道说。。。还在在意刚才的事情吗？ -vol4/005.ogg;
+changeFigure:none -next;
+changeFigure:mu/si1up/4.png -next;
+美羽:啊。。。嗯，稍微有一点，真的只有一点而已。 -vol4/006.ogg;
+新吾:去看电影居然被当成小孩子，真的是不得了。 -vol4/007.ogg;
+changeFigure:mu/si1up/5.png -next;
+美羽:真是的，我明明比新吾大的。 -vol4/009.ogg;
+啊，对不起，在这种地方大声说这件事。 -vol4/011.ogg;
+新吾:不。。。怎么说呢，你的心情我很明白。 -vol4/012.ogg;
+美羽:真的吗？对不起，新吾君。 -vol4/013.ogg;
+新吾:呃？ -vol4/014.ogg;
+美羽:我比新吾大，却被当成要买儿童票的小孩子。这样的事，也让新吾很难堪吧。 -vol4/015.ogg;
+新吾:美羽学姐才不小呢。 -vol4/016.ogg;
+changeFigure:none -next;
+changeFigure:mu/si2up/4.png -next;
+美羽:新吾君。。。你在看哪里？ -vol4/017.ogg;
+新吾:呃？啊。。。我很抱歉！ -vol4/018.ogg;
+changeFigure:none -next;
+changeFigure:mu/si1up/2.png -next;
+美羽:虽然我有点不太明白。。。不过，还是谢谢你，新吾君 -vol4/019.ogg;
+新吾:学姐真的不用道歉的。 -vol4/020.ogg;
+美羽:我们两个声音都很大。呵呵，就像一对羞涩的情侣那样。 -vol4/021.ogg;
+新吾:。。。说的也是，但是和学姐一起就没关系。 -vol4/022.ogg;
+美羽:我知道的，新吾君是把我当作成熟的女性看待的。 -vol4/023.ogg;
+新吾:这也是被迫的嘛。 -vol4/024.ogg;
+美羽:呃？新吾君你好像想起来什么的样子了？ -vol4/025.ogg;
+新吾:啊！没什么事，真的没什么事。 -vol4/026.ogg;
+changeFigure:none -next;
+changeFigure:mu/si1up/3.png -next;
+美羽:嗯哼🎵，真是奇怪呢，新吾君。 -vol4/027.ogg;
+新吾:和美羽学姐久违的约会，不自觉变得有点飘然了。 -vol4/029.ogg;
+changeFigure:none -next;
+changeFigure:mu/si2up/2.png -next;
+美羽:啊，我也是。 -vol4/030.ogg;
+新吾:这样的吗? -vol4/031.ogg;
+美羽:很久没有这样和新吾君一起出门了，果然还是会变（悸动战士）得紧张呢。 -vol4/032.ogg;
+新吾:我很开心。 -vol4/033.ogg;
+changeFigure:none -next;
+changeFigure:mu/si2up/1.png -next;
+美羽:我也是，嗯哼🎵，这样来算是第二次了。呐，我们去吃点蛋糕什么的吧。 -vol4/034.ogg;
+新吾:啊，可以，一起去吃点什么。 -vol4/035.ogg;
+美羽:好难选啊，新吾君你想吃什么？ -vol4/036.ogg;
+新吾:和学姐一样的就可以。 -vol4/037.ogg;
+changeFigure:none -next;
+changeFigure:mu/si2up/6.png -next;
+美羽:啊，这样真的是犯规了。 -vol4/038.ogg;
+end;
+
+
+
+
+
+
+
+
+
+
+
