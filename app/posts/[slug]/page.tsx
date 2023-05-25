@@ -1,5 +1,5 @@
 import React from 'react'
-import Date from '../../date/page'
+import Date from '../../Date'
 import utilStyles from '../../utils.module.css'
 import { getPostData } from '../posts'
 import { Metadata } from 'next'
