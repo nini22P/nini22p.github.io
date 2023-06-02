@@ -1,11 +1,11 @@
 import React from "react"
+import Link from 'next/link'
+import styles from './NavBar.module.scss'
 
 const NavBar = () => {
   return (
-    <nav>
-      <ul>
-        <li>Home</li>
-      </ul>
+    <nav className={styles.nav}>
+      <Link href={"/"}>HOME</Link>
     </nav>
   )
 }

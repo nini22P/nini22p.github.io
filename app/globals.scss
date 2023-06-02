@@ -1,3 +1,5 @@
+@use 'colors';
+
 html,
 body {
   padding: 0;
@@ -13,7 +15,7 @@ body {
 }
 
 a {
-  color: #0070f3;
+  color: colors.$primary-color;
   text-decoration: none;
 }
 
@@ -24,4 +26,20 @@ a:hover {
 img {
   max-width: 100%;
   display: block;
+}
+
+code {
+  color: #333;
+  background-color: #f5f5f5;
+  padding: 4px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+pre {
+  background-color: #f5f5f5;
+  padding: 4px;
+  overflow: auto;
 }

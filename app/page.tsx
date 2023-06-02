@@ -1,28 +1,22 @@
 import React from 'react'
 import Link from 'next/link'
-import Date from './Date'
+import Date from './component/Date'
 import utilStyles from './utils.module.css'
 import { getAllPostsData } from './posts/posts'
 import { Metadata } from 'next'
-
-const siteTitle = 'Blog'
+import siteConfig from '../site.config'
+import { AllPostsData } from './type'
 
 export const metadata: Metadata = {
-  title: siteTitle,
+  title: siteConfig.siteTitle,
 };
 
 const Home = async () => {
-  type AllPostsData = {
-    date: string
-    title: string
-    id: string
-  }[]
-
   const allPostsData: AllPostsData = await getAllPostsData()
 
   return (
     <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`} >
-      <h2 className={utilStyles.headingLg}>Blog</h2>
+      <h1 className={utilStyles.headingLg}>{siteConfig.siteTitle}</h1>
       <ul className={utilStyles.list}>
         {allPostsData.map(({ id, date, title }) => (
           <li className={utilStyles.listItem} key={id}>
