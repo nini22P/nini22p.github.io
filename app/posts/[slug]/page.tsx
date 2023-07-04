@@ -1,12 +1,17 @@
 import React from 'react'
 import Date from '../../component/Date'
 import utilStyles from '../../utils.module.css'
-import { getPostData } from '../posts'
+import { getAllPostsData, getPostData } from '../posts'
 import { Metadata } from 'next'
 import Link from 'next/link'
 
 export const metadata: Metadata = {
   title: 'title',
+}
+
+export async function generateStaticParams() {
+  const allPostData = await getAllPostsData()
+  return allPostData.map(item => { return { slug: item.id } })
 }
 
 const Post = async ({ params }: { params: { slug: string } }) => {
