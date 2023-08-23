@@ -1,12 +1,20 @@
 import React from 'react'
-import Date from '../../component/Date'
+import Date from '../../components/Date'
 import utilStyles from '../../utils.module.css'
 import { getAllPostsData, getPostData } from '../posts'
-import { Metadata } from 'next'
 import Link from 'next/link'
 
-export const metadata: Metadata = {
-  title: 'title',
+type PostData = {
+  title: string,
+  date: string,
+  contentHtml: string
+}
+
+export async function generateMetadata({ params: { slug } }: { params: { slug: string } }) {
+  const postData: PostData = await getPostData(slug)
+  return {
+    title: postData.title,
+  }
 }
 
 export async function generateStaticParams() {
@@ -14,14 +22,9 @@ export async function generateStaticParams() {
   return allPostData.map(item => { return { slug: item.id } })
 }
 
-const Post = async ({ params }: { params: { slug: string } }) => {
-  type PostData = {
-    title: string,
-    date: string,
-    contentHtml: string
-  }
+const Post = async ({ params: { slug } }: { params: { slug: string } }) => {
 
-  const postData: PostData = await getPostData(params.slug)
+  const postData: PostData = await getPostData(slug)
 
   return (
     <>

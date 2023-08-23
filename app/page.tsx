@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import Date from './component/Date'
+import Date from './components/Date'
 import utilStyles from './utils.module.css'
 import { getAllPostsData } from './posts/posts'
 import { Metadata } from 'next'
