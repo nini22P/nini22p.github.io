@@ -1,6 +1,6 @@
 import React from 'react'
 import { Metadata } from 'next'
-import './globals.scss'
+import './globals.css'
 import styles from './layout.module.css'
 import NavBar from './NavBar'
 import siteConfig from '../site.config'

@@ -85,6 +85,8 @@ isTop: false
 
 [想要传达给你的爱恋](http://appendingpulse.jp/dl/koif5cn0nv2p/)
 
+[幸运草的约定 Clover Days](https://patches.nekonyansoft.com/)
+
 ## 其他
 
 [BALDR SKY](https://mega.nz/folder/vBlw0KSZ#wuyBgwB8xrEfsmMC3mn1bg)
