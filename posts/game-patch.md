@@ -1,6 +1,6 @@
 ---
 title: '游戏补丁'
-date: '2023-03-10 18:24:52'
+date: '2023-09-22'
 tags: [补丁,HIKARI FIELD,Steam]
 published: true
 hideInList: false
@@ -86,6 +86,8 @@ isTop: false
 [想要传达给你的爱恋](http://appendingpulse.jp/dl/koif5cn0nv2p/)
 
 [幸运草的约定 Clover Days](https://patches.nekonyansoft.com/)
+
+[炼爱秘仪](https://appendingpulse.jp/dl/arc6ne2b2s42/)
 
 ## 其他
 
