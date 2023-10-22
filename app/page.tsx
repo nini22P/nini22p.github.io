@@ -5,7 +5,7 @@ import utilStyles from './utils.module.css'
 import { getAllPostsData } from './posts/posts'
 import { Metadata } from 'next'
 import siteConfig from '../site.config'
-import { AllPostsData } from './type'
+import { AllPostsData } from './types'
 
 export const metadata: Metadata = {
   title: siteConfig.siteTitle,

@@ -1,4 +1,4 @@
-import { SiteConfig } from "./app/type"
+import { SiteConfig } from "./app/types"
 
 const siteConfig: SiteConfig = {
   siteTitle: '22\'s Blog',
