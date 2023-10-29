@@ -1,11 +1,8 @@
 ---
 title: 'Baldr Sky Steam 补丁 + GOG 汉化'
-date: '2022-06-17 23:22:05'
+date: '2022-06-17'
 tags: [GOG,汉化,补丁,Baldr Sky]
 published: true
-hideInList: false
-feature: '/images/posts/gog-baldr-sky-chs-patch.jpg'
-isTop: false
 ---
 ## Steam 补丁
 

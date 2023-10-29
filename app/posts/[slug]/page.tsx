@@ -1,35 +1,29 @@
 import React from 'react'
-import Date from '../../components/Date'
+import Date from '../../../components/Date'
 import utilStyles from '../../utils.module.css'
 import { getAllPostsData, getPostData } from '../posts'
 import Link from 'next/link'
 
-type PostData = {
-  title: string,
-  date: string,
-  contentHtml: string
-}
-
-export async function generateMetadata({ params: { slug } }: { params: { slug: string } }) {
-  const postData: PostData = await getPostData(slug)
+export const generateMetadata = async ({ params: { slug } }: { params: { slug: string } }) => {
+  const postData = await getPostData(slug)
   return {
     title: postData.title,
   }
 }
 
-export async function generateStaticParams() {
+export const generateStaticParams = async () => {
   const allPostData = await getAllPostsData()
-  return allPostData.map(item => { return { slug: item.id } })
+  return allPostData.map(item => { return { slug: item.slug } })
 }
 
 const Post = async ({ params: { slug } }: { params: { slug: string } }) => {
 
-  const postData: PostData = await getPostData(slug)
+  const postData = await getPostData(slug)
 
   return (
     <>
       <article>
-        <h1 className={utilStyles.headingXl}>{postData.title}</h1>
+        <h1>{postData.title}</h1>
         <div className={utilStyles.lightText}>
           <Date dateString={postData.date} />
         </div>

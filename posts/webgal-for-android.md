@@ -1,11 +1,8 @@
 ---
 title: '打包 WebGAL 游戏到 Android 平台'
-date: '2023-03-12 20:50:36'
+date: '2023-03-12'
 tags: [Android,WebGAL,GalGame]
 published: true
-hideInList: false
-feature: '/images/posts/webgal-for-android.webp'
-isTop: false
 ---
 ## 前期准备
 

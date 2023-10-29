@@ -1,11 +1,8 @@
 ---
 title: '提取某路人游戏的音频和CG'
-date: '2022-09-27 17:40:13'
+date: '2022-09-27'
 tags: [PSV,解包]
 published: true
-hideInList: false
-feature: 
-isTop: false
 ---
 将游戏解密，`PCSG00543\PSP2_GAME\USRDIR`下就有我们想要的文件。
 根据文件名推断音频是`.awb`，CG在`resource.dat`。

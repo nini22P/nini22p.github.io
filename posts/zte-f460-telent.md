@@ -3,9 +3,6 @@ title: 'ZTE F460 使用 Telnet'
 date: '2023-09-07'
 tags: []
 published: true
-hideInList: false
-feature: 
-isTop: false
 ---
 
 ## Telnet 连接

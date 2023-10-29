@@ -8,7 +8,7 @@ import siteConfig from '../site.config'
 export const metadata: Metadata = {
   title: siteConfig.siteTitle,
   description: siteConfig.description,
-};
+}
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -20,7 +20,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         </div>
       </body>
     </html>
-  );
+  )
 }
 
 export default RootLayout

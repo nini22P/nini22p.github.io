@@ -1,11 +1,14 @@
-import React from "react"
+import React from 'react'
 import Link from 'next/link'
 import styles from './NavBar.module.css'
+import utilStyles from './utils.module.css'
+import siteConfig from '../site.config'
 
 const NavBar = () => {
   return (
     <nav className={styles.nav}>
-      <Link href={"/"}>HOME</Link>
+      <h1 className={utilStyles.headingMd}>{siteConfig.siteTitle}</h1>
+      <Link href={'/'}>HOME</Link>
     </nav>
   )
 }

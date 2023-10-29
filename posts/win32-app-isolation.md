@@ -1,11 +1,8 @@
 ---
 title: 'Win32 app isolation 使用体验'
-date: '2023-05-26 17:34:58'
+date: '2023-05-26'
 tags: [Windows]
 published: true
-hideInList: false
-feature: 
-isTop: false
 ---
 最近微软公布了 Win32 app isolation，据称可以隔离应用程序，保护用户隐私。
 

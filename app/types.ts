@@ -1,12 +1,11 @@
-type SiteConfig = {
-  siteTitle: string
-  description: string
+export type SiteConfig = {
+  siteTitle: string,
+  description: string,
 }
 
-type AllPostsData = {
-  date: string
-  title: string
-  id: string
-}[]
-
-export type { SiteConfig, AllPostsData }
+export type PostData = {
+  title: string,
+  date: string,
+  tags: string[],
+  published: boolean,
+}

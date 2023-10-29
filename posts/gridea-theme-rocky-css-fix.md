@@ -1,11 +1,8 @@
 ---
 title: 'Gridea 主题 Rocky CSS 修复'
-date: '2023-04-03 20:38:01'
+date: '2023-04-03'
 tags: [Gridea 主题,CSS]
 published: true
-hideInList: false
-feature: '/images/posts/gridea-theme-rocky-css-fix.webp'
-isTop: false
 ---
 ## 使用方法
 
