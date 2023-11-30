@@ -4,4 +4,6 @@ date: '2022-08-30'
 tags: []
 published: true
 ---
-`background-image: linear-gradient(rgba(0, 0, 0, .5), rgb(0, 0, 0, .5)), url("/images/background.webp");`
+``` css
+background-image: linear-gradient(rgba(0, 0, 0, .5), rgb(0, 0, 0, .5)), url("/images/background.webp");
+```

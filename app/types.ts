@@ -7,5 +7,15 @@ export type PostData = {
   title: string,
   date: string,
   tags: string[],
-  published: boolean,
+}
+
+export type Post = {
+  slug: string,
+  data: PostData,
+  contentHtml: string,
+}
+
+export type PostListItem = {
+  slug: string,
+  data: PostData,
 }

@@ -4,37 +4,12 @@
 
 @layer base {
 
-  @media (prefers-color-scheme: dark) {
-    html {
-      color-scheme: dark;
-    }
-  }
-
-  @media (prefers-color-scheme: light) {
-    html {
-      color-scheme: dark;
-    }
-  }
-
-  html,
-  body {
-    @apply font-sans text-slate-300;
+  :root{
+    color-scheme: dark;
   }
 
   P {
     @apply my-2
-  }
-
-  h1 {
-    @apply text-3xl font-light py-4;
-  }
-
-  h2 {
-    @apply text-xl font-bold py-2;
-  }
-
-  h3 {
-    @apply text-lg font-semibold;
   }
 
   a {
@@ -43,24 +18,6 @@
 
   a:hover {
     text-decoration: underline;
-  }
-
-  img {
-    max-width: 100%;
-    display: block;
-  }
-
-  code {
-    @apply px-1 py-0.5 text-white bg-red-900 rounded;
-    font-family: 'Courier New', Courier, monospace;
-  }
-
-  pre {
-    @apply overflow-auto p-3 bg-red-900 rounded;
-  }
-
-  pre>code {
-    padding: 0;
   }
 
   ul {

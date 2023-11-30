@@ -6,7 +6,7 @@ published: true
 ---
 一般用法
 
-```
+``` shell
 $ ffmpeg \
 -loop 1 -i "cover.jpg" -i "input.mp3" \
 -c:v libx264 -tune stillimage -c:a aac -b:a 320k -shortest \
