@@ -9,7 +9,7 @@ const Button = ({ children, className, title, onClick }
     <div
       className={`${styles.button} ${className}`}
       title={title}
-      onClick={onClick}
+      onClick={onClick ? () => setTimeout(() => onClick(), 200) : void 0}
     >
       {children}
     </div>
