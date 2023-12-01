@@ -1,0 +1,8 @@
+.button {
+  @apply cursor-pointer select-none;
+  @apply transition hover:scale-110 active:scale-90;
+}
+
+.button svg {
+  @apply w-6 h-6;
+}

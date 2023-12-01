@@ -1,3 +1,10 @@
-.container {
-  @apply max-w-xl max-xl:px-4 mx-auto mt-4 mb-8;
+.background {
+  @apply fixed top-0 left-0 w-full h-full -z-50;
+  background: url('/images/bg.webp') no-repeat center;
+  background-size: cover;
+}
+
+.content {
+  @apply w-full min-h-screen pb-20 px-4 pt-4 xl:pt-8;
+  /* @apply bg-white bg-opacity-50 backdrop-blur; */
 }

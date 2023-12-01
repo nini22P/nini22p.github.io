@@ -4,28 +4,12 @@
 
 @layer base {
 
-  :root{
-    color-scheme: dark;
-  }
-
-  P {
-    @apply my-2
+  :root {
+    -webkit-tap-highlight-color: transparent;
   }
 
   a {
-    @apply decoration-transparent text-red-500;
-  }
-
-  a:hover {
     text-decoration: underline;
-  }
-
-  ul {
-    @apply list-disc pl-6;
-  }
-
-  ol {
-    @apply list-decimal pl-6;
   }
 
 }

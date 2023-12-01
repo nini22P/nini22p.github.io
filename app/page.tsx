@@ -1,32 +1,23 @@
+'use client'
+
 import React from 'react'
-import Link from 'next/link'
-import Date from '../components/Date'
-import utilStyles from './utils.module.css'
-import { getPostList } from './posts/posts'
-import { Metadata } from 'next'
-import siteConfig from '../site.config'
+// import styles from './Home.module.css'
+import Card from '../ui/Card/Card'
+import { useRouter } from 'next/navigation'
 
-export const metadata: Metadata = {
-  title: siteConfig.siteTitle,
-}
+const Home = () => {
 
-const Home = async () => {
-  const postList = await getPostList()
+  const router = useRouter()
 
   return (
-    <>
-      <ul className={utilStyles.list}>
-        {postList.map(({ slug, data }) => (
-          <li className={utilStyles.listItem} key={slug}>
-            <Link href={`/posts/${slug}`}>{data.title}</Link>
-            <br />
-            <small className={utilStyles.lightText}>
-              <Date dateString={data.date} />
-            </small>
-          </li>
-        ))}
-      </ul>
-    </>
+    <div className='grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 auto-rows-fr gap-4'>
+      <Card className='col-span-2 rounded-lg p-8' title='博客' onClick={() => router.push('/posts')}>
+        博客
+      </Card>
+      <Card className='aspect-square rounded-lg p-8' title='OMP' onClick={() => window.open('https://nini22p.github.io/omp', '_blank')}>
+        OMP
+      </Card>
+    </div>
   )
 }
 export default Home

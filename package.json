@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev --turbo",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -9,10 +9,12 @@
   "dependencies": {
     "date-fns": "^2.30.0",
     "gray-matter": "^4.0.3",
+    "material-icons": "^1.13.12",
     "next": "^14.0.3",
     "prismjs": "^1.29.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-icons": "^4.12.0",
     "rehype-autolink-headings": "^7.1.0",
     "rehype-prism": "^2.3.2",
     "rehype-prism-plus": "^1.6.3",

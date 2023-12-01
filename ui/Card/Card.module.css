@@ -1,0 +1,8 @@
+.card {
+  @apply bg-white bg-opacity-75 backdrop-blur shadow;
+}
+
+.clickable {
+  @apply cursor-pointer select-none;
+  @apply transition hover:scale-[101%] active:scale-[99%];
+}

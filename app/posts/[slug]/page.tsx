@@ -1,13 +1,13 @@
 import React from 'react'
 import Date from '../../../components/Date'
-import utilStyles from '../../utils.module.css'
 import { getPostList, getPost } from '../posts'
-import Link from 'next/link'
+import Card from '../../../ui/Card/Card'
+import siteConfig from '../../../site.config'
 
 export const generateMetadata = async ({ params: { slug } }: { params: { slug: string } }) => {
   const post = await getPost(slug)
   return {
-    title: post.data.title,
+    title: `${post.data.title} | ${siteConfig.siteTitle}`,
   }
 }
 
@@ -21,18 +21,15 @@ const Post = async ({ params: { slug } }: { params: { slug: string } }) => {
   const post = await getPost(slug)
 
   return (
-    <>
-      <article className='prose prose-invert'>
+    <Card className='max-w-4xl m-auto overflow-x-hidden p-4 pt-8 rounded-lg'>
+      <article className='prose prose-slate max-w-4xl'>
         <h1>{post.data.title}</h1>
-        <div className={utilStyles.lightText}>
+        <div>
           <Date dateString={post.data.date} />
         </div>
         <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
       </article>
-      <div className={utilStyles.backToHome}>
-        <Link href="/">← Back to home</Link>
-      </div>
-    </>
+    </Card>
   )
 }
 
