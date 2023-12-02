@@ -1,10 +1,5 @@
 .background {
-  @apply fixed top-0 left-0 w-full h-full -z-50;
+  @apply fixed top-0 left-0 w-full h-full -z-50 blur;
   background: url('/images/bg.webp') no-repeat center;
   background-size: cover;
-}
-
-.content {
-  @apply w-full min-h-screen pb-20 px-4 pt-4 xl:pt-8;
-  /* @apply bg-white bg-opacity-50 backdrop-blur; */
 }

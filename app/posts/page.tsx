@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Date from '../../components/Date'
 import { getPostList } from './posts'
-import Card from '../../ui/Card/Card'
+import Card from '../../components/Card/Card'
 import siteConfig from '../../site.config'
 import { Metadata } from 'next'
 

@@ -10,7 +10,7 @@ module.exports = {
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {
-            pre:{
+            pre: {
               color: '#ccc',
               backgroundColor: '#2d2d2d',
               fontSize: '1rem',
@@ -33,5 +33,9 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
+  ],
+  safelist: [
+    { pattern: /^col-span-[1-6]$/ },
+    { pattern: /^row-span-[1-6]$/ },
   ],
 }

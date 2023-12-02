@@ -4,8 +4,8 @@ import React from 'react'
 import styles from './Navigation.module.css'
 import { usePathname, useRouter } from 'next/navigation'
 import { MdApps, MdHome, MdArrowBackIosNew } from 'react-icons/md'
-import Button from '../../ui/Button/Button'
-import Card from '../../ui/Card/Card'
+import Button from '../Button/Button'
+import Card from '../Card/Card'
 
 
 const Navigation = () => {

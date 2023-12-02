@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react'
-import Card from '../../ui/Card/Card'
+import Card from '../../components/Card/Card'
 import apps from '../../data/apps'
 import useOpen from '../../hooks/useOpen'
 

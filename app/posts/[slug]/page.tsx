@@ -1,7 +1,7 @@
 import React from 'react'
 import Date from '../../../components/Date'
 import { getPostList, getPost } from '../posts'
-import Card from '../../../ui/Card/Card'
+import Card from '../../../components/Card/Card'
 import siteConfig from '../../../site.config'
 
 export const generateMetadata = async ({ params: { slug } }: { params: { slug: string } }) => {

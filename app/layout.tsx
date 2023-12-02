@@ -7,7 +7,6 @@ import siteConfig from '../site.config'
 import Navigation from '../components/Navigation/Navigation'
 // import Status from '../components/Status/Status'
 // import Dock from '../components/Dock/Dock'
-import Card from '../ui/Card/Card'
 
 export const metadata: Metadata = {
   title: siteConfig.siteTitle,
@@ -19,11 +18,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <html>
       <body>
-        <Card className={styles.content}>
+        <div className='w-full min-h-screen pb-20 px-4 pt-4 xl:pt-8'>
           <div className='max-w-7xl m-auto'>
             {children}
           </div>
-        </Card>
+        </div>
         <div className={styles.background}></div>
         <div className='fixed bottom-0 inset-x-0 max-w-7xl mx-auto'>
           <Navigation />
