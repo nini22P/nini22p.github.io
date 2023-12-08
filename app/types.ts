@@ -1,6 +1,7 @@
 export type SiteConfig = {
   siteTitle: string,
   description: string,
+  url: string,
 }
 
 export type PostData = {
