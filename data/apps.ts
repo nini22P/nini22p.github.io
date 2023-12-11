@@ -1,5 +1,5 @@
 const apps: { title: string, path?: string, url?: string, }[] = [
-  { title: '博客', path: '/posts' },
+  { title: '博客', path: '/blog' },
   { title: 'OMP', url: 'https://nini22p.github.io/omp' },
   { title: 'NPS 列表', url: 'https://nini22p.github.io/nps-list/' },
   { title: 'WebGAL Android', url: 'https://github.com/nini22P/WebGAL-Android' },
