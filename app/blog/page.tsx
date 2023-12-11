@@ -19,7 +19,7 @@ const Posts = async () => {
       <ul className='divide-y'>
         {postList.map(({ slug, data }) => (
           <li key={slug} className='py-4'>
-            <Link href={`/posts/${slug}`}>{data.title}</Link>
+            <Link href={`/blog/${slug}`}>{data.title}</Link>
             <br />
             <small>
               <Date dateString={data.date} />
