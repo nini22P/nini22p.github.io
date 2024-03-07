@@ -1,6 +1,7 @@
 'use client'
 
-import { DiscussionEmbed } from "disqus-react"
+import React from 'react'
+import { DiscussionEmbed } from 'disqus-react'
 
 const Disqus = ({ shortname, url, identifier, title }: { shortname: string, url: string, identifier: string, title: string }) => {
   return (

@@ -3,7 +3,6 @@ import Date from '../../../components/Date'
 import { getPostList, getPost } from '../posts'
 import Card from '../../../components/Card/Card'
 import siteConfig from '../../../site.config'
-import { DiscussionEmbed } from 'disqus-react'
 import Disqus from './Disqus'
 
 export const generateMetadata = async ({ params: { slug } }: { params: { slug: string } }) => {
