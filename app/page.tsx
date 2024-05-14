@@ -19,7 +19,7 @@ const Home = () => {
       {
         home.map(item =>
           <Card
-            className={`${COL_SPANS(item.size.col)} ${ROW_SPANS(item.size.row)} ${isSquare(item.size.col, item.size.row) ? 'aspect-square' : ''} rounded-lg p-8`}
+            className={`${COL_SPANS(item.size.col)} ${ROW_SPANS(item.size.row)} ${isSquare(item.size.col, item.size.row) ? 'aspect-square' : ''} rounded-lg p-4`}
             title={item.title}
             key={item.title}
             onClick={() => open({ path: item.path, url: item.url })}>

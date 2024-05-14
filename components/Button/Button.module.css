@@ -1,5 +1,5 @@
 .button {
-  @apply cursor-pointer select-none;
+  @apply cursor-pointer select-none h-6 text-center;
   @apply transition hover:scale-110 active:scale-90;
 }
 

@@ -5,7 +5,7 @@ import styles from './layout.module.css'
 import siteConfig from '../site.config'
 import Navigation from '../components/Navigation/Navigation'
 import Script from 'next/script'
-// import Status from '../components/Status/Status'
+import Status from '../components/Status/Status'
 // import Dock from '../components/Dock/Dock'
 
 export const metadata: Metadata = {
@@ -29,7 +29,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
       </Script>
 
       <body>
-        <div className='w-full min-h-screen pb-20 px-4 pt-4 xl:pt-8'>
+        <div className='w-full min-h-screen pb-20 xl:pb-4 px-4 pt-4 xl:pt-8'>
           <div className='max-w-7xl m-auto'>
             {children}
           </div>
@@ -38,7 +38,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         <div className='fixed bottom-0 inset-x-0 max-w-7xl mx-auto'>
           <Navigation />
           {/* <Dock /> */}
-          {/* <Status /> */}
+          <Status />
         </div>
 
       </body>

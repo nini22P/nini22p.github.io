@@ -14,7 +14,7 @@ const AppsGrid = () => {
       {
         apps.map(app =>
           <Card
-            className='aspect-square rounded-lg p-8'
+            className='aspect-square rounded-lg p-4'
             title={app.title}
             key={app.title}
             onClick={() => open({ path: app.path, url: app.url })}>

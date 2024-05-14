@@ -7,7 +7,7 @@ const Card = ({ children, className, title, onClick }
   const style = `${styles.card} ${className} ${onClick ? styles.clickable : ''}`
 
   return (
-    <div className={style} title={title} onClick={onClick ? () => setTimeout(() => onClick(), 200) : void 0}>
+    <div className={style} title={title} onClick={onClick}>
       {children}
     </div>
   )

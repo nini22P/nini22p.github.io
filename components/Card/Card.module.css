@@ -1,5 +1,5 @@
 .card {
-  @apply bg-white bg-opacity-75 backdrop-blur shadow-md;
+  @apply bg-white bg-opacity-75 backdrop-blur shadow drop-shadow-sm;
 }
 
 .clickable {

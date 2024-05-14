@@ -14,14 +14,14 @@ const Navigation = () => {
 
   const isHome = pathname === '/'
   const isApps = pathname === '/apps/'
-  const isApp = pathname.split('/').filter(path => path !== '').length === 1
-  const getBackPath = (pathname: string) => `/${pathname.split('/').filter(path => path !== '').slice(0, -1).join('/')}`
+  // const isApp = pathname.split('/').filter(path => path !== '').length === 1
+  // const getBackPath = (pathname: string) => `/${pathname.split('/').filter(path => path !== '').slice(0, -1).join('/')}`
 
   return (
     <Card className={styles.navigation}>
       {
-        !isHome && !isApps && !isApp &&
-        <Button title='返回' onClick={() => router.push(getBackPath(pathname))}>
+        !isHome &&
+        <Button title='返回' onClick={() => history.back()}>
           <MdArrowBackIosNew />
         </Button>
       }
@@ -37,6 +37,7 @@ const Navigation = () => {
           <MdApps />
         </Button>
       }
+
     </Card>
   )
 }
