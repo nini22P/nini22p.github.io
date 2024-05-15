@@ -17,7 +17,8 @@ const AppsGrid = () => {
             className='aspect-square rounded-lg p-4'
             title={app.title}
             key={app.title}
-            onClick={() => open({ path: app.path, url: app.url })}>
+            onClick={() => open({ path: app.path, url: app.url })}
+          >
             {app.title}
           </Card>
         )
