@@ -1,5 +1,5 @@
 .background {
-  @apply fixed top-0 left-0 w-full h-full -z-50 blur;
-  background: url('/images/bg.webp') no-repeat center;
-  background-size: cover;
+  @apply fixed top-0 left-0 w-full h-full -z-50 blur bg-gray-200;
+  /* background: url('/images/bg.webp') no-repeat center; */
+  /* background-size: cover; */
 }
