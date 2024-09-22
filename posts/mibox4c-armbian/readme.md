@@ -85,7 +85,7 @@ echo "options rtl8188fu rtw_ips_mode=0" | sudo tee /etc/modprobe.d/rtl8188fu.con
 sudo modprobe -rv rtl8188fu && sudo modprobe -v rtl8188fu
 ```
 
-（可选）固定 mac 地址，`xx:xx:xx:xx:xx:xx` 替换为你的 mac 地址，可以网络上随便生成一个。
+（可选）固定 mac 地址，`xx:xx:xx:xx:xx:xx` 替换为你的 mac 地址。
 
 ``` shell
 echo "options rtl8188fu rtw_ips_mode=0 rtw_initmac="xx:xx:xx:xx:xx:xx"" | sudo tee /etc/modprobe.d/rtl8188fu.conf
