@@ -10,8 +10,7 @@ published: true
 网上教程很多了，我这里只提供刷机相关软件下载地址。
 
 * [Mi BOX 4 YQZM 2 Root Aml Upgrade Package 20200808 / Internet Archive](https://archive.org/details/mi-box-4-yqzm-2-root-aml-upgrade-package-20200808)
-* [Amlogic_USB_Burning_Tool_v2.1.9.zip / Android Data Host](https://androiddatahost.com/svf58)
-* [Amlogic_Driver.zip / Android Data Host](https://androiddatahost.com/5quvy)
+* [Amlogic_USB_Burning_Tool_v2.1.6.8.exe](https://nini22p.github.io/files/Amlogic_USB_Burning_Tool_v2.1.6.8.exe)
 
 ## U盘启动 Armbian
 
@@ -202,8 +201,7 @@ tmpfs              80544       4     80540   1% /run/user/0
 ## 相关链接
 
 * [Mi BOX 4 YQZM 2 Root Aml Upgrade Package 20200808 / Internet Archive](https://archive.org/details/mi-box-4-yqzm-2-root-aml-upgrade-package-20200808)
-* [Amlogic_USB_Burning_Tool_v2.1.9.zip / Android Data Host](https://androiddatahost.com/svf58)
-* [Amlogic_Driver.zip / Android Data Host](https://androiddatahost.com/5quvy)
+* [Amlogic_USB_Burning_Tool_v2.1.6.8.exe](https://nini22p.github.io/files/Amlogic_USB_Burning_Tool_v2.1.6.8.exe)
 * [amlogic-s9xxx-armbian 固件 / GitHub](https://github.com/ophub/amlogic-s9xxx-armbian/releases)
 * [Armbian_24.11.0_amlogic_s905l_noble_6.6.50_server_2024.09.10.img / GitHub](https://github.com/ophub/amlogic-s9xxx-armbian/releases/download/Armbian_noble_save_2024.09/Armbian_24.11.0_amlogic_s905l_noble_6.6.50_server_2024.09.10.img.gz)
 * [终端模拟器 / F-Droid](https://f-droid.org/zh_Hans/packages/com.termoneplus/)
