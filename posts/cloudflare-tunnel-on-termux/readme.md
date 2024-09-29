@@ -75,69 +75,29 @@ npm start
 proot-distro login ubuntu
 ```
 
-下载 [cloudflared-linux-arm64.deb](https://github.com/cloudflare/cloudflared/releases) ，本文编写时使用的版本为 `2023.3.1`。
+前往 Zero Trust 控制台 [https://one.dash.cloudflare.com](https://one.dash.cloudflare.com) 。
+
+进入 `Networks` / `Tunnels`，点击 `Create a tunnel` 按钮新建隧道。
+
+保存隧道名字之后会让你选择平台和架构，依次选 Debian 和 arm64-bit，复制下方左边的命令，以下命令为示例，请复制你实际控制台页面上的命令并运行。
+
+```
+curl -L --output cloudflared.deb https://github.com/cloudflare/cloudflared/releases/latest/download/cloudflared-linux-arm64.deb && 
+
+sudo dpkg -i cloudflared.deb && 
+
+sudo cloudflared service install <token>
+```
+
+运行 Tunnel。
 
 ``` shell
-apt install wget -y && wget https://github.com/cloudflare/cloudflared/releases/download/2023.3.1/cloudflared-linux-arm64.deb
+service cloudflared start
 ```
 
-安装 cloudflared-linux-arm64.deb。
+如果成功页面下方会看到连接上的设备，保存后会让你添加一个页面。
 
-``` shell
-dpkg -i cloudflared-linux-arm64.deb
-```
-
-查看版本号。
-
-``` shell
-cloudflared -v
-```
-
-登录 Cloudflare 账户并授权，会自动打开浏览器进行授权。配置文件默认保存在 `/root/.cloudflared` 文件夹。
-
-``` shell
-cloudflared tunnel login
-```
-
-创建名为 `nextjs-blog` 的隧道。
-
-``` shell
-cloudflared tunnel create nextjs-blog
-```
-
-完毕后会在 `/root/.cloudflared/` 保存一个名为 "Tunnel ID" 的 json 文件。
-
-打开 `.cloudflared` 文件夹编写配置文件。
-
-``` shell
-cd .cloudflared
-apt install vim -y && vim config.yml
-```
-
-根据官方提供的配置模板来修改。
-
-``` yaml
-tunnel: 6ff42ae2-765d-4adf-8112-31c55c1551ef
-credentials-file: /root/.cloudflared/6ff42ae2-765d-4adf-8112-31c55c1551ef.json
-
-ingress:
-  - hostname: nextjs-blog.example.com
-    service: http://localhost:3000
-  - service: http_status:404
-```
-
-点击 `ESC`，输入 `:wq` 保存并退出。
-添加 DNS 记录，dns 后面依次为 Tunnel 名称和配置文件中的主机名。
-
-``` shell
-cloudflared tunnel route dns nextjs-blog nextjs-blog.example.com 
-```
-
-运行 Cloudflare Tunnel。
-
-``` shell
-cloudflared tunnel run
-```
+`Subdomain` 输入 `nextjs-blog`, `Domain` 选择你的域名。`Type` 选择 `http`, `URL` 输入 `localhost:3000`，最后点击保存。
 
 在浏览器地址栏输入 `nextjs-blog.example.com` 即可访问刚刚创建的 `nextjs-blog` 项目。
 
