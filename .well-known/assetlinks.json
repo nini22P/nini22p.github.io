@@ -1,0 +1,9 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "nini22p.omp",
+    "sha256_cert_fingerprints":
+    ["C4:33:0E:51:76:56:4F:E1:A3:3F:A5:1A:B1:56:2D:CA:DE:DD:D2:68:D8:41:10:CE:CB:C3:5D:1B:E5:09:69:87"]
+  }
+}]
