@@ -5,6 +5,8 @@ tags: ['Clash Verge Rev']
 published: true
 ---
 
+**更新：推荐使用 [Clash Composer](https://clash-composer.pages.dev/)，可以填写表单生成订阅链接和脚本**
+
 将全局扩展脚本并替换为如下脚本，然后根据实际情况添加域名或 IP 规则即可。
 
 ``` javascript
