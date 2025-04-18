@@ -2,6 +2,8 @@ import { MetadataRoute } from 'next'
 import siteConfig from '../site.config'
 import { getPostList } from './blog/posts'
 
+export const dynamic = 'force-static'
+
 const sitemap = async (): Promise<MetadataRoute.Sitemap> => {
   const postList = await getPostList()
 
