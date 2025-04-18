@@ -1,3 +1,5 @@
+@reference "./globals.css";
+
 .background {
   @apply fixed top-0 left-0 w-full h-full -z-50 blur bg-gray-200;
   /* background: url('/images/bg.webp') no-repeat center; */

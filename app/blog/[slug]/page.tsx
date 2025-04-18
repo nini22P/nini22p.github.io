@@ -5,7 +5,10 @@ import Card from '../../../components/Card/Card'
 import siteConfig from '../../../site.config'
 import Disqus from './Disqus'
 
-export const generateMetadata = async ({ params: { slug } }: { params: { slug: string } }) => {
+export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }) => {
+
+  const { slug } = await params
+
   const post = await getPost(slug)
   return {
     title: `${post.data.title} | 博客 | ${siteConfig.siteTitle}`,
@@ -17,7 +20,9 @@ export const generateStaticParams = async () => {
   return postList.map(item => { return { slug: item.slug } })
 }
 
-const Post = async ({ params: { slug } }: { params: { slug: string } }) => {
+const Post = async ({ params }: { params: Promise<{ slug: string }> }) => {
+
+  const { slug } = await params
 
   const post = await getPost(slug)
 
