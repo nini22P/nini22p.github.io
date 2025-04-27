@@ -1,5 +1,5 @@
 ---
-title: 'Surface Go 3 Windows 10'
+title: 'Surface Go 3 降级 Windows 10'
 date: '2025-04-26'
 tags: ['Microsoft', 'Surface', 'Windows']
 published: true
