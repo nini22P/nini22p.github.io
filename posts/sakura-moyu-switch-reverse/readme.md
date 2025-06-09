@@ -95,12 +95,14 @@ public class ToEncoding // TypeDefIndex: 1608
 
 ``` asm
 MOV     X21, X0
-BL      0x20BAD60 // get_UTF8NoBOM
+BL      0x20BAD60
 MOV     X1, X21
-BL      0x2538EA0 // GetString
+BL      0x2538EA0
 MOV     X2, X0
-B       0x244A5C8 // 返回跳板的下一行
+B       0x244A5C8
 ```
+
+最后这行是跳回调用 `ToUnicode` 函数的位置的下一行，也就是我们之前跳板跳转的位置的下一行。
 
 ![修改后的 `UnlockReadKs` 函数](/images/posts/152755.png)
 
