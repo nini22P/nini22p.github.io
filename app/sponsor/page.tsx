@@ -23,10 +23,6 @@ const Sponsor = () => {
           <Image src="/images/afdian-logo.png" alt="afdian" width={400} height={400} />
           <span>爱发电</span>
         </Link>
-        <Link href='https://ko-fi.com/nini22p' target='_blank' className='aspect-square rounded-lg p-4 hover:bg-gray-200'>
-          <Image src="/images/kofi-logo.png" alt="afdian" width={400} height={400} />
-          <span>Ko-fi</span>
-        </Link>
       </div>
     </Card>
   )
