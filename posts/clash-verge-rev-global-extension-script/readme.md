@@ -2,7 +2,7 @@
 title: 'Clash Verge Rev 全局扩展脚本'
 date: '2024-10-13'
 tags: ['Clash Verge Rev']
-published: true
+draft: false
 ---
 
 **更新：推荐使用 [Clash Composer](https://clash-composer.pages.dev/)，可以填写表单生成订阅链接和脚本**

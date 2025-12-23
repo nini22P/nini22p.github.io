@@ -17,14 +17,14 @@ import 'prismjs/components/prism-typescript'
 import 'prismjs/components/prism-bash'
 import 'prismjs/components/prism-css'
 import 'prismjs/components/prism-yaml'
-import { PostData } from '../types'
+import { Post, PostData } from '../types'
 
 const postsDirectory = path.join(process.cwd(), '/posts')
 
-export const getPostList = async () => {
+export const getPosts = async (): Promise<Post[]> => {
   const fileNames = fs.readdirSync(postsDirectory, { withFileTypes: true })
 
-  const postList = await Promise.all(
+  const posts: Post[] = await Promise.all(
     fileNames
       .filter((file) => file.isDirectory())
       .map(async (file) => {
@@ -34,18 +34,31 @@ export const getPostList = async () => {
         const fileContents = fs.readFileSync(fullPath, 'utf8')
         const matterResult = matter(fileContents)
 
+        const processedContent = await unified()
+          .use(remarkParse)
+          .use(remarkGfm)
+          .use(remarkRehype)
+          .use(rehypePrism)
+          .use(rehypeSlug)
+          .use(rehypeAutolinkHeadings)
+          .use(rehypeStringify)
+          .process(matterResult.content)
+
+        const contentHtml = processedContent.toString()
+
         return {
           slug,
           data: matterResult.data as PostData,
+          contentHtml,
         }
       })
   )
 
-  return postList
+  return posts.filter((post) => post.data.draft !== true)
     .sort((a, b) => (a.data.date < b.data.date) ? 1 : -1)
 }
 
-export const getPost = async (slug: string) => {
+export const getPost = async (slug: string): Promise<Post> => {
   const fullPath = path.join(postsDirectory, `${slug}/readme.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const matterResult = matter(fileContents)

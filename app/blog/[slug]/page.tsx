@@ -1,6 +1,6 @@
 import React from 'react'
 import Date from '../../../components/Date'
-import { getPostList, getPost } from '../posts'
+import { getPosts, getPost } from '../posts'
 import Card from '../../../components/Card/Card'
 import siteConfig from '../../../site.config'
 import Disqus from './Disqus'
@@ -16,8 +16,8 @@ export const generateMetadata = async ({ params }: { params: Promise<{ slug: str
 }
 
 export const generateStaticParams = async () => {
-  const postList = await getPostList()
-  return postList.map(item => { return { slug: item.slug } })
+  const posts = await getPosts()
+  return posts.map(item => { return { slug: item.slug } })
 }
 
 const Post = async ({ params }: { params: Promise<{ slug: string }> }) => {
@@ -32,6 +32,13 @@ const Post = async ({ params }: { params: Promise<{ slug: string }> }) => {
         <h1>{post.data.title}</h1>
         <div>
           <Date dateString={post.data.date} />
+          {post.data.tags && (
+            <div className="flex gap-2">
+              {post.data.tags.map(tag => (
+                <span key={tag} className="bg-gray-100 px-2 py-0.5 rounded text-sm mt-1">#{tag}</span>
+              ))}
+            </div>
+          )}
         </div>
         <div dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
       </article>

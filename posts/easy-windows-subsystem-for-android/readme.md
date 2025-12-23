@@ -2,7 +2,7 @@
 title: '简单两步安装安卓子系统WSA - Windows Subsystem for Android™️'
 date: '2022-10-25'
 tags: []
-published: true
+draft: false
 ---
 首先确保电脑升级到 Windows 11，并开启虚拟机平台。
 

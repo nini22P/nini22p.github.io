@@ -2,7 +2,7 @@
 title: 'Gridea 主题 Rocky CSS 修复'
 date: '2023-04-03'
 tags: [Gridea 主题,CSS]
-published: true
+draft: false
 ---
 ## 使用方法
 

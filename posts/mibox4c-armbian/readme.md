@@ -2,7 +2,7 @@
 title: '小米盒子4C 安装 Armbian'
 date: '2024-09-22'
 tags: [Armbian,小米盒子,小米]
-published: true
+draft: false
 ---
 
 ## 刷入 Root 固件
@@ -48,6 +48,7 @@ root@armbian:~# armbian-ddbr
 --------------------------------------------------
 [ OPTIONS ] Please select (b/r):
 ```
+
 输入 b 进行备份，备份完毕后可以用 SSH 客户端上的 SFTP 工具将备份文件复制出来。
 
 ## 安装 WiFi 驱动
@@ -115,7 +116,6 @@ echo "options rtl8188fu rtw_ips_mode=0 rtw_initmac="xx:xx:xx:xx:xx:xx"" | sudo t
 └───────────────────────────────────────────────┘                           
 ```
 
-
 ## 安装到 Armbian 到 EMMC
 
 如果只想 U盘启动的话这部分可以跳过，只要开机时不拔掉 U盘，都是优先启动 U盘上的系统，不小心回到安卓系统就 `reboot update` U盘启动。
@@ -143,6 +143,7 @@ ID    SOC        MODEL                                         DTB
 -----------------------------------------------------------------------------------------------------
 [ OPTIONS ] Please Input ID: 115
 ```
+
 输入这里面找到型号 `MiBox-4C`，输入 `115` 并回车。
 
 文件类型选 `ext4`。
@@ -157,6 +158,7 @@ ID    SOC        MODEL                                         DTB
 -----------------------------------------------
 [ OPTIONS ] Please Input ID (1/2): 1
 ```
+
 最后等待安装完毕，输入 `poweroff` 关闭系统，拔掉 U盘，重新插入电源即可启动安装到 EMMC 上的 Armbian。
 
 如果后面想快速完全重新安装可以在安装完毕重启前使用 `armbian-ddbr` 进行备份。

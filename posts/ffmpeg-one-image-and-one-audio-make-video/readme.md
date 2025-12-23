@@ -2,7 +2,7 @@
 title: '使用 FFmpeg 将单张图片和单个音频生成视频'
 date: '2022-11-13'
 tags: []
-published: true
+draft: false
 ---
 一般用法
 

@@ -2,7 +2,7 @@
 title: '在壁纸引擎中创建网页视频壁纸'
 date: '2023-12-07'
 tags: [壁纸引擎,Wallpaper Engine]
-published: true
+draft: false
 ---
 这个标题看着就很怪，为什么要用网页创建视频壁纸呢？
 

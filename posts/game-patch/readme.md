@@ -2,7 +2,7 @@
 title: '游戏补丁'
 date: '2023-09-22'
 tags: [补丁,HIKARI FIELD,Steam]
-published: true
+draft: false
 ---
 ## HIKARI FIELD
 

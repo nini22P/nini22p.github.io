@@ -2,7 +2,7 @@
 title: '樱花萌放 switch 版本汉化逆向'
 date: '2025-06-09'
 tags: ['switch', '汉化', '逆向']
-published: true
+draft: false
 ---
 
 之前通关了樱花萌放实在是意犹未尽，看到有 switch 版本，分辨率也比 PC 版本高，想看看能不能移植汉化。
@@ -25,16 +25,16 @@ published: true
 // Namespace: USEncoder
 public class ToEncoding // TypeDefIndex: 1608
 {
-	// Methods
+ // Methods
 
-	// RVA: 0x1AB1790 Offset: 0x1AB1891 VA: 0x1AB1790
-	public static byte[] ToSJIS(string unicode_str) { }
+ // RVA: 0x1AB1790 Offset: 0x1AB1891 VA: 0x1AB1790
+ public static byte[] ToSJIS(string unicode_str) { }
 
-	// RVA: 0x1AB1B50 Offset: 0x1AB1C51 VA: 0x1AB1B50
-	public static string ToUnicode(byte[] sjis_bytes) { }
+ // RVA: 0x1AB1B50 Offset: 0x1AB1C51 VA: 0x1AB1B50
+ public static string ToUnicode(byte[] sjis_bytes) { }
 
-	// RVA: 0x1AB1F20 Offset: 0x1AB2021 VA: 0x1AB1F20
-	public void .ctor() { }
+ // RVA: 0x1AB1F20 Offset: 0x1AB2021 VA: 0x1AB1F20
+ public void .ctor() { }
 }
 ```
 
@@ -57,15 +57,15 @@ public class ToEncoding // TypeDefIndex: 1608
 之前提到 `ToUnicode` 函数输入一个 Shift-JIS 字节数组，返回 UTF -8 编码文本，如果要改为读取 UTF-8 编码的脚本，那就是要写一段函数，输入一个 UTF-8 字节数组，返回 UTF-8 编码文本。幸运的是 unity 提供了我们需要的函数。打开之前的 `dump.cs` 文件搜索 `utf8`，最终我们能找到一个 `get_UTF8NoBOM` 函数，来获取 UTF-8 编码器对象。
 
 ``` cs
-	// RVA: 0x20BAD60 Offset: 0x20BAE61 VA: 0x20BAD60
-	private static Encoding get_UTF8NoBOM() { }
-``` 
+ // RVA: 0x20BAD60 Offset: 0x20BAE61 VA: 0x20BAD60
+ private static Encoding get_UTF8NoBOM() { }
+```
 
 搜索 `getstring`，有一个 `GetString` 函数，可以调用上面编码器对象的 `GetString` 方法，把字节数组转换为 UTF-8 编码的文本。
 
 ``` cs
-	// RVA: 0x2538EA0 Offset: 0x2538FA1 VA: 0x2538EA0 Slot: 34
-	public virtual string GetString(byte[] bytes) { }
+ // RVA: 0x2538EA0 Offset: 0x2538FA1 VA: 0x2538EA0 Slot: 34
+ public virtual string GetString(byte[] bytes) { }
 ```
 
 等等，这里只能改一行，该怎么写下多行呢，翻遍也没找到空白区域给我们用。那就只能找一下没用的函数，借点空间用。
@@ -73,8 +73,8 @@ public class ToEncoding // TypeDefIndex: 1608
 由于 switch 和 PS4 版本用的同一套程序，所以可以思考 switch 版本缺失的功能，短暂的思考后想到了 switch 是没有成就系统的，所以可以从这方面着手。在 `dump.cs` 中搜索 `achievement`, 能找到相关代码，可以尝试。最终我选择了这个 `UnlockReadKs` 函数：
 
 ``` cs
-	// RVA: 0x271B170 Offset: 0x271B271 VA: 0x271B170
-	private bool UnlockReadKs(int type, AchievementReadCondition args) { }
+ // RVA: 0x271B170 Offset: 0x271B271 VA: 0x271B170
+ private bool UnlockReadKs(int type, AchievementReadCondition args) { }
 ```
 
 来到 `0x271B170` 处，可以看到空间很够，最后的语句是 `RET` 返回。

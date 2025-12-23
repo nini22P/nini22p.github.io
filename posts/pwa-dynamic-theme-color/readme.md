@@ -2,7 +2,7 @@
 title: 'PWA 动态主题颜色'
 date: '2024-02-19'
 tags: ['PWA']
-published: true
+draft: false
 ---
 
 通常 PWA 的主题颜色是写在 `manifest.json` 中，无法动态改变。
