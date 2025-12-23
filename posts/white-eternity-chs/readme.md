@@ -2,7 +2,7 @@
 title: '《星辰恋曲的白色永恒 -White Eternity-》PlayStation Vita 简体中文汉化补丁'
 date: '2025-12-24'
 tags: [PSV, 汉化, 补丁]
-draft: false
+draft: true
 ---
 
 ## 汉化介绍
