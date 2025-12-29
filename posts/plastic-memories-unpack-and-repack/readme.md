@@ -21,6 +21,8 @@ psbdecompile info-psb -k 2shj693vwue5t -l 131 -a scenario_info.psb.m
 
 然后文件夹下会生成一个 `scenario` 文件夹，里面就是解包出来的脚本文件，还有 `scenario_info.psb.m.json` 和 `scenario_info.psb.m.resx.json` 两个文件。其他的文件同理。
 
+另外 PC 版本的密钥是 `38757621acf82`。
+
 ## 封包
 
 封包的话，我建议把之前解包出来的 `scenario` 文件夹和 `scenario_info.psb.m.json` 和 `scenario_info.psb.m.resx.json` 两个文件复制到一个新的文件夹中，防止覆盖原文件。然后运行
@@ -173,4 +175,4 @@ psbuild info-psb patch_info.psb.m.json
 
 将 `config_body.bin`、`config_info.psb.m`、`patch_body.bin` 和 `patch_info.psb.m` 这几个文件复制到模拟器游戏文件夹中运行，可以在控制台看到大部分资源都是从补丁包中加载的。
 
-当然现在的补丁包还是太大了，如果是无需修改的文件，进入子文件夹把它的文件夹和对应的 json 文件删除。补丁包里没有的文件会从原来的包中加载。这样就实现小体积的补丁包了。
+当然现在的补丁包还是太大了，最好是只在 patch 文件夹里放修改过的文件。这样就实现小体积的补丁包了。
