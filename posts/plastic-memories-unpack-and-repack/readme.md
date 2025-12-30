@@ -175,4 +175,13 @@ psbuild info-psb patch_info.psb.m.json
 
 将 `config_body.bin`、`config_info.psb.m`、`patch_body.bin` 和 `patch_info.psb.m` 这几个文件复制到模拟器游戏文件夹中运行，可以在控制台看到大部分资源都是从补丁包中加载的。
 
-当然现在的补丁包还是太大了，最好是只在 patch 文件夹里放修改过的文件。这样就实现小体积的补丁包了。
+当然现在的补丁包还是太大了，最好是只在 patch 文件夹里放修改过的文件。这样再打包就实现小体积的补丁包了。
+
+## 字体处理
+
+原来的汉化字体纹理歪歪扭扭，还有锯齿，出于强迫症，我尝试写了一个[字体工具](https://github.com/nini22P/plastic-memories-font-tool)，效果还不错，感兴趣的可以看一看。
+
+## 参考
+
+- [woqux02 的文章](https://www.cnblogs.com/woqux02/p/13615513.html)
+- [FreeMote](https://github.com/UlyssesWu/FreeMote)
