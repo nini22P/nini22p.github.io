@@ -181,6 +181,14 @@ psbuild info-psb patch_info.psb.m.json
 
 原来的汉化字体纹理歪歪扭扭，还有锯齿，出于强迫症，我尝试写了一个[字体工具](https://github.com/nini22P/plastic-memories-font-tool)，效果还不错，感兴趣的可以看一看。
 
+## 图片处理
+
+PSV 版本解包出来的图片包含有 8 位和 32 位两种的，注意汉化图片导出时的色深要与原图一致。PC 版的图片默认就是 32 位的，可以不用特地处理。
+
+在导出 8 位图片前要在 PS 中将 `导出首选项` 里的 `使用旧版“导出为”` 选项勾上。
+
+当然，如果你不想导出 8 位图片，你也可以修改对应的 `psb.m.json`，将 `CI8_SW` 和 `RGBA8_SW` 改为 `RGBA8` 即可使用默认导出的 32 位图片。
+
 ## 参考
 
 - [woqux02 的文章](https://www.cnblogs.com/woqux02/p/13615513.html)
