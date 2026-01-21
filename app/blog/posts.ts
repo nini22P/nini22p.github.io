@@ -1,22 +1,6 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { unified } from 'unified'
-import remarkParse from 'remark-parse'
-import remarkGfm from 'remark-gfm'
-import remarkRehype from 'remark-rehype'
-import rehypePrism from 'rehype-prism'
-import rehypeStringify from 'rehype-stringify'
-import rehypeSlug from 'rehype-slug'
-import rehypeAutolinkHeadings from 'rehype-autolink-headings'
-import 'prismjs'
-import 'prismjs/themes/prism-tomorrow.css'
-import 'prismjs/components/prism-kotlin'
-import 'prismjs/components/prism-javascript'
-import 'prismjs/components/prism-typescript'
-import 'prismjs/components/prism-bash'
-import 'prismjs/components/prism-css'
-import 'prismjs/components/prism-yaml'
 import { Post, PostData } from '../types'
 
 const postsDirectory = path.join(process.cwd(), '/posts')
@@ -34,22 +18,10 @@ export const getPosts = async (): Promise<Post[]> => {
         const fileContents = fs.readFileSync(fullPath, 'utf8')
         const matterResult = matter(fileContents)
 
-        const processedContent = await unified()
-          .use(remarkParse)
-          .use(remarkGfm)
-          .use(remarkRehype)
-          .use(rehypePrism)
-          .use(rehypeSlug)
-          .use(rehypeAutolinkHeadings)
-          .use(rehypeStringify)
-          .process(matterResult.content)
-
-        const contentHtml = processedContent.toString()
-
         return {
           slug,
           data: matterResult.data as PostData,
-          contentHtml,
+          content: matterResult.content,
         }
       })
   )
@@ -63,21 +35,9 @@ export const getPost = async (slug: string): Promise<Post> => {
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const matterResult = matter(fileContents)
 
-  const processedContent = await unified()
-    .use(remarkParse)
-    .use(remarkGfm)
-    .use(remarkRehype)
-    .use(rehypePrism)
-    .use(rehypeSlug)
-    .use(rehypeAutolinkHeadings)
-    .use(rehypeStringify)
-    .process(matterResult.content)
-
-  const contentHtml = processedContent.toString()
-
   return {
     slug,
     data: matterResult.data as PostData,
-    contentHtml,
+    content: matterResult.content,
   }
 }

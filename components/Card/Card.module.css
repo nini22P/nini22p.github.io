@@ -1,7 +1,7 @@
 @reference '../../app/globals.css';
 
 .card {
-  @apply bg-white/75 backdrop-blur shadow drop-shadow-sm;
+  @apply bg-white/75 backdrop-blur shadow drop-shadow shadow-amber-50;
 }
 
 .clickable {

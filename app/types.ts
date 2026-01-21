@@ -14,5 +14,5 @@ export type PostData = {
 export type Post = {
   slug: string,
   data: PostData,
-  contentHtml: string,
+  content: string,
 }
