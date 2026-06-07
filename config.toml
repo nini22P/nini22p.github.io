@@ -1,0 +1,18 @@
+base_url = "https://nini22p.github.io"
+title = "22's Blog"
+description = "22's Blog"
+default_language = "zh-CN"
+theme = "hook"
+
+compile_sass = true
+build_search_index = false
+generate_feeds = true
+
+taxonomies = [{ name = "tags" }]
+
+[markdown]
+highlighting = { code = true, theme = "dracula" }
+
+[extra]
+disqus_shortname = "nini22p"
+links = [{ title = "GitHub", href = "http://github.com/nini22P" }]

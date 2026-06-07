@@ -1,0 +1,23 @@
+{% extends "hook/templates/index.html" %}
+
+{% block content %}
+{% set blog = get_section(path="blog/_index.md") %}
+{% if section.content or blog.pages %}
+<main>
+    {% if section.content %}
+    <div {% if blog.pages %}class="space"{% endif %}>
+        {{ section.content | safe }}
+    </div>
+    {% endif %}
+    {% if blog.pages %}
+    <h2>Recent posts</h2>
+    <ul>
+        {% for post in blog.pages | slice(end=3) %}
+        <li><a href="{{ post.permalink }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+    <p><a href="{{ blog.permalink }}">Archive</a></p>
+    {% endif %}
+</main>
+{% endif %}
+{% endblock content %}
