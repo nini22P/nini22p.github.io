@@ -6,6 +6,7 @@ import siteConfig from '../../../site.config'
 import Disqus from './Disqus'
 import { MDXRemote } from 'next-mdx-remote-client/rsc'
 import remarkGfm from 'remark-gfm'
+import remarkMath from 'remark-math'
 import remarkEmoji from 'remark-emoji'
 import remarkFlexibleContainers, { type FlexibleContainerOptions } from 'remark-flexible-containers'
 import remarkFlexibleCodeTitles from 'remark-flexible-code-titles'
@@ -13,7 +14,9 @@ import rehypePrism from 'rehype-prism-plus'
 import rehypeSlug from 'rehype-slug'
 import rehypeAutolinkHeadings from 'rehype-autolink-headings'
 import rehypeRaw from 'rehype-raw'
+import rehypeKatex from 'rehype-katex'
 import 'prismjs/themes/prism-tomorrow.css'
+import 'katex/dist/katex.min.css'
 import Pre from '../../../components/Mdx/Pre'
 
 export const generateMetadata = async ({ params }: { params: Promise<{ slug: string }> }) => {
@@ -56,6 +59,7 @@ const Post = async ({ params }: { params: Promise<{ slug: string }> }) => {
             mdxOptions: {
               remarkPlugins: [
                 remarkGfm,
+                remarkMath,
                 remarkEmoji,
                 [
                   remarkFlexibleContainers,
@@ -73,6 +77,7 @@ const Post = async ({ params }: { params: Promise<{ slug: string }> }) => {
               ],
               rehypePlugins: [
                 rehypeRaw,
+                rehypeKatex,
                 [rehypePrism, { ignoreMissing: true, showLineNumbers: true }],
                 rehypeSlug,
                 rehypeAutolinkHeadings
